@@ -1,24 +1,12 @@
 # coating_test
 
-## Project setup
+## サーバー起動させるには
 ```
 yarn install
+npm run serve
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
+### production用build
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
