@@ -29,9 +29,10 @@ export default {
     this.initPrefectures();
   },
   methods: {
-    /* APIにアクセス */
+    // APIにアクセス
     fetchAPI: function(path) {
       const response = axios.get(
+        // sample GET https://opendata.resas-portal.go.jp/api/v1/prefectures
         `https://opendata.resas-portal.go.jp/api/v1/${path}`,
         {
           headers: { "X-API-KEY": ACCESS_TOKEN }
@@ -39,8 +40,6 @@ export default {
       );
       return response;
     },
-
-    /* 県の初期表示 */
     initPrefectures: async function() {
       const path = "prefectures";
       try {
@@ -53,7 +52,7 @@ export default {
           };
         });
       } catch (error) {
-        console.log(error.message);
+        console.error(error.message);
       }
     },
     drawChart: async function(id, name) {
