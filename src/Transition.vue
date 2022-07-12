@@ -59,7 +59,7 @@ export default {
     drawChart: async function(id, name) {
       // /result/prefCode 都道府県コード
       // /result/prefName 都道府県名
-      const path = `population/composition/perYear?cityCode=-&prefCode=${id}`;
+      const path = `population/composition/perYear?prefCode=-&prefCode=${id}`;
       try {
         const response = await this.fetchAPI(path);
         const population = response.data.result.data[0].data.map(

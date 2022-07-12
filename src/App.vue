@@ -79,7 +79,6 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 #app {
   max-width: 1024px;
