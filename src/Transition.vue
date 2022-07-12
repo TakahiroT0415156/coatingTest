@@ -31,8 +31,8 @@ export default {
   methods: {
     // APIにアクセス
     fetchAPI: function(path) {
+      // sample GET https://opendata.resas-portal.go.jp/api/v1/prefectures
       const response = axios.get(
-        // sample GET https://opendata.resas-portal.go.jp/api/v1/prefectures
         `https://opendata.resas-portal.go.jp/api/v1/${path}`,
         {
           headers: { "X-API-KEY": ACCESS_TOKEN }
@@ -41,6 +41,7 @@ export default {
       return response;
     },
     initPrefectures: async function() {
+      // 初期値の設定
       const path = "prefectures";
       try {
         const response = await this.fetchAPI(path);
@@ -56,6 +57,8 @@ export default {
       }
     },
     drawChart: async function(id, name) {
+      // /result/prefCode 都道府県コード
+      // /result/prefName 都道府県名
       const path = `population/composition/perYear?cityCode=-&prefCode=${id}`;
       try {
         const response = await this.fetchAPI(path);
@@ -94,11 +97,5 @@ export default {
 
 label {
   cursor: pointer;
-}
-
-@media screen and (max-width: 425px) {
-  .prefectures {
-    font-size: 13px;
-  }
 }
 </style>
