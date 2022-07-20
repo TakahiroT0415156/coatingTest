@@ -17,7 +17,7 @@
 <script>
 import axios from "axios";
 
-const ACCESS_TOKEN = process.env.RESAS_API;
+const ACCESS_TOKEN = process.env.VUE_APP_RESAS_API;
 
 export default {
   data() {
@@ -85,17 +85,18 @@ export default {
   }
 };
 </script>
+
 <style scoped>
-.prefectures-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+  .prefectures-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
-.prefectures {
-  font-size: 15px;
-}
+  .prefectures {
+    font-size: 15px;
+  }
 
-label {
-  cursor: pointer;
-}
+  label {
+    cursor: pointer;
+  }
 </style>
